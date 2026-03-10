@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-950: #06080D;
+  --color-ink-900: #0C1020;
+  --color-ink-800: #141828;
+  --color-ink-700: #1E2538;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E4C97A;
+  --color-gold-dark: #9E7A2E;
+  --color-cream: #F5F0E8;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Crimson Pro", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink-950);
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--color-ink-950); }
+  ::-webkit-scrollbar-thumb { background: var(--color-ink-700); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-gold-dark); }
+
+  h1, h2, h3, h4 { font-family: var(--font-display); }
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-gold);
+  color: var(--color-ink-950);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: var(--color-gold-light);
+    transform: translateY(-2px);
+  }
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: 1px solid oklch(from var(--color-gold) l c h / 40%);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+  }
+}
+
+.section-eyebrow {
+  color: var(--color-gold);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--color-cream);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.section-sub {
+  font-family: var(--font-body);
+  color: oklch(from var(--color-cream) l c h / 60%);
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.gold-divider {
+  width: 3rem;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
