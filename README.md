@@ -18,30 +18,6 @@ Site elegante e refinado para escritório de advocacia. Design editorial com pal
 | React Icons | ^5.5.0 |
 | React Intersection Observer | ^9.16.0 |
 
-## 🆕 Tailwind CSS v4 — O que mudou
-
-Tailwind v4 usa **configuração CSS-first**. Não há mais `tailwind.config.js` nem `postcss.config.js`.
-
-**Setup (vite.config.js):**
-```js
-import tailwindcss from '@tailwindcss/vite'
-export default defineConfig({ plugins: [react(), tailwindcss()] })
-```
-
-**CSS (src/styles/index.css):**
-```css
-@import "tailwindcss";
-
-@theme {
-  --color-gold: #C9A84C;
-  --font-display: "Playfair Display", serif;
-}
-```
-
-Todos os tokens do `@theme` viram classes Tailwind automaticamente (`bg-gold`, `font-display`, etc.).
-
-## 📁 Estrutura de Pastas
-
 ```
 src/
 ├── components/
@@ -62,16 +38,6 @@ src/
 ├── App.jsx
 └── main.jsx
 ```
-
-## 🚀 Como Rodar
-
-```bash
-npm install
-npm run dev     # http://localhost:5173
-npm run build
-npm run preview
-```
-
 ## 🎨 Identidade Visual
 
 | Elemento | Valor |
