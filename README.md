@@ -49,5 +49,6 @@ src/
 | CSS | Tailwind CSS v4 |
 
 ---
+LINK: https://legal-website-react-6bvjc3lpd-lucas-fernandes-projects-7bd0b04b.vercel.app
 
 Desenvolvido por **Lucas Fernandes** – Desenvolvedor Web
