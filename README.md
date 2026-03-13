@@ -1,5 +1,5 @@
 # Veiga & Associados ⚖️
-
+---
 Template premium para escritório de advocacia, desenvolvido com React + Vite + **Tailwind CSS v4**.
 
 ## ✨ Visão Geral
